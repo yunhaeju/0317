@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightyellow;
+        }
+        .bgcolor--blue{
+            background-color: lightblue;
+        }
+        .bgcolor--gray{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn_bg_toggle">라이트블루로 변경</button>
+    <script>
+        const btnBg = document.querySelector('.btn_bg_toggle');
+        btnBg.addEventListener('click', function () {
+        document.body.classList.toggle('bgcolor--blue');
+        });
+    </script>
+    <button class="btn_bg_reset">리셋</button>
+    <script>
+        const btnBg2 = document.querySelector('.btn_bg_reset')
+        btnBg2.addEventListener('click', function () {
+        document.body.classList.remove('bgcolor--blue');
+        document.body.classList.remove('bgcolor--gray');
+        });
+    </script>
+    <button class="btn_bg_gray">라이트그레이로 변경</button>
+    <script>
+        const btnBg3 = document.querySelector('.btn_bg_gray');
+        btnBg3.addEventListener('click', function () {
+        document.body.classList.toggle('bgcolor--gray');
+        });
+    </script>
+
+
+</body>
+</html>
